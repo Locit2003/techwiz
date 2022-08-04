@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Dancing+Script:wght@400;500&display=swap');
+.text-warning {
+    color: #ede861 !important;
+}
+
+.text-muted {
+    color: #bcbcbc !important;
+}
+
+.text-black {
+    color: #191F3A !important;
+}
+
+.text-success {
+    color: #59ab6e !important;
+}
+
+.text-light {
+    color: #cfd6e1 !important;
+}
+
+.bg-light-dark {
+    background-color: #191F3A;
+}
+
+.bg-dark {
+    background-color: #212934 !important;
+}
+
+.bg-light {
+    background-color: #e9eef5 !important;
+}
+
+.bg-black {
+    background-color: #1d242d !important;
+}
+
+.bg-light-white {
+    background-color: #EFFDF5;
+}
+
+.bg-success {
+    background-color: #59ab6e !important;
+}
+
+.btn-success {
+    background-color: #59ab6e !important;
+    border-color: #56ae6c !important;
+}
+
+.bg-light-blue {
+    background-color: #9bd1f8 !important;
+}
+
+.sticky-nav {
+    min-height: 40px;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    position: sticky;
+    background-color: rgba(255, 255, 255, 1)
+}
+
+.axy {
+    margin-left: 50px;
+}
+
+.mr-center {
+    margin: 0 auto;
+}
+
+.po-absolute {
+    position: absolute;
+}
+
+.po-relative {
+    position: relative;
+}
+
+.wd-70 {
+    width: 70% !important;
+}
+
+.wd-1200 {
+    width: 1400px !important;
+}
+
+.f-left {
+    float: left !important;
+}
+
+.f-right {
+    float: right !important;
+}
+
+.font-dancing {
+    font-size: 17px;
+    font-family: 'Dancing Script';
+}
+
+.animation-01s {
+    animation-duration: 0.1s !important;
+}
+
+.animation-03s {
+    animation-duration: 0.3s !important;
+}
+
+.animation-05s {
+    animation-duration: 0.5s !important;
+}
+
+.animation-07s {
+    animation-duration: 0.7s !important;
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html ng-app="techwiz" ng-controller="AppCtrl" lang="en">
+
+<head>
+    <title>Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/chax-box.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/thu_vien.css">
+    <link rel="stylesheet" href="css/reponsive_menu.css">
+    <link rel="stylesheet" href="/plugins/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="/plugins/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style_reponsive.css">
+    <link rel="stylesheet" href="css/style_owl.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style_footer.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <link rel="stylesheet" href="css/addToCart.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/add-to-card.css">
+
+</head>
+
+<body class="bg-light-white">
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav p-r">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+           LOGO
+        </a>
+
+            <button class="navbar-toggler border-0 btn_hidden_icon" ng-click="hidden_icon()" type="button" data-bs-toggle="collapse" data-bs-target="#etpmmo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="full" style="" id="openmenu" ng-click="openMenu_rp()">
+                <span class="toggle_icon" style="cursor:pointer"></span>
+            </div>
+
+            <div class="sticky-nav align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="etpmmo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" flex-fill d-n d-lg-flex justify-content-lg-between align-self-center">
+                        <form action="#" id="form">
+                            <input type="search" placeholder="Search..." id="search">
+                        </form>
+                        <div class="seacrch">
+                            <a class="nav-icon d-none d-lg-inline" href="#">
+                                <i class="fa fa-fw fa-search text-dark mr-2" ng-click="search()"></i>
+                            </a>
+                        </div>
+                        <div class="full openmenu" style="" id="" ng-click="openMenu()">
+                            <span class="toggle_icon" style="cursor:pointer"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container ">
+        <div class="col-check">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                </label>
+            </div>
+            <div class="product" style="color: rgba(0,0,0,.8);width: 46.27949%; margin-left:20px">Sản phẩm</div>
+            <div class="price" style="width: 15.88022%; text-align: center;">Đơn giá</div>
+            <div class="quantity" style="width: 15.4265%;text-align: center;">Số lượng</div>
+            <div class="money" style="width: 10.43557%;text-align: center;">số tiền</div>
+            <div class="manipulation" style="width: 12.70417%; text-align: center;">thao tác</div>
+        </div>
+
+        <div class="content-prod" style="background: #fff; position: relative;">
+            <div class="col-check1">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="tags">
+                    <label>MALL</label>
+                    <label>Logo Shop</label>
+                </div>
+
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+            <div class="col-check2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                    </label>
+                </div>
+                <div class="hhh" style="color: rgba(0,0,0,.8); margin-left:20px; display: flex;">
+
+                    <div class="images">
+                        <img src="img/den-ban-11.png" width="80px" alt="" srcset="">
+                    </div>
+                    <p class="description m-4" style="width: 245px;">đèn bàn </p>
+                </div>
+                <div class="pl" style="width: 17.24138%">
+                    <div class="name_pl">Phân loại hàng:<button class="btn-j"></button></div>
+                    <div class="style_pl">Đen</div>
+                </div>
+
+                <div style="width: 15.88022%;">
+                    <div><span class="price">₫45.000</span><span class="sale">₫38.800</span></div>
+                </div>
+                <div class="input-group" style="width: 15.4265%;text-align: center;">
+                    <input type="number" min='1' class="" name="" id="">
+                </div>
+                <div class="sale_price"><span>₫38.800</span></div>
+                <div class="_2y8iJi _2qPRqW">
+                    <button class="delete">Xóa</button>
+                </div>
+            </div>
+
+
+            <div class="_2uSgOy">Thêm mã giảm giá của Shop</div>
+            <div class="_2oaKY4">
+                <div class="_1PmfJ2">Giảm ₫25.000 phí vận chuyển đơn tối thiểu ₫50.000</div>
+                <div class="detail" id="pc-drawer-id-18" tabindex="0">
+                    <span class="_1UZAeJ"> Tìm hiểu thêm
+                </span></div>
+            </div>
+            <div class="subtotal cf bg-light" style="position: sticky; bottom: 0; width: 100%;">
+                <footer id="site-footer">
+                    <div class="container clearfix">
+                        <div class="left">
+                            <h2 class="subtotal">Subtotal: <span>163.96</span>€</h2>
+                            <h3 class="tax">Taxes (5%): <span>8.2</span>€</h3>
+                            <h3 class="shipping">Shipping: <span>5.00</span>€</h3>
+                        </div>
+
+                        <div class="right">
+                            <h1 class="total">Total: <span>177.16</span>€</h1>
+                            <a class="btn">Checkout</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="plugins/owl.carousel.js"></script>
+<script src="plugins/owl-carousel.js"></script>
+<script src="plugins/owl.carousel.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>

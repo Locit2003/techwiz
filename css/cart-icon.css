@@ -1,0 +1,50 @@
+.main_cart {
+    background-color: #888 !important;
+}
+
+#table-add-cart {
+    width: 330px;
+    right: 0;
+    height: 140px;
+    top: 40px;
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+    display: none;
+}
+
+#table-add-cart.active {
+    display: block;
+}
+
+.table-cart {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#table-add-cart p {
+    font-size: 12px !important;
+    color: #ee4d2d;
+}
+
+tbody tr td {
+    padding: 4px;
+    font-size: 14px;
+}
+
+tbody tr td img {
+    width: 50px;
+    height: 50px;
+}
+
+.view-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px 10px;
+    border: none;
+    background: #ee4d2d;
+    color: #fff;
+}

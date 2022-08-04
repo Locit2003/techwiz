@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html ng-app="form" ng-controller="AppCtrl" lang="en">
+
+<head>
+    <title>Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/thu_vien.css">
+    <link rel="stylesheet" href="css/reponsive_menu.css">
+    <link rel="stylesheet" href="css/style_reponsive.css">
+    <link rel="stylesheet" href="css/style_owl.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style_footer.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+</head>
+
+<body class="bg-light-white">
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav p-r">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+               LOGO
+            </a>
+
+            <button class="navbar-toggler border-0 btn_hidden_icon" ng-click="hidden_icon()" type="button" data-bs-toggle="collapse" data-bs-target="#etpmmo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="full" id="openmenu" ng-click="openMenu_rp()">
+                <span class="toggle_icon" style="cursor:pointer"></span>
+            </div>
+
+            <div class="sticky-nav align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="etpmmo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" flex-fill d-n d-lg-flex justify-content-lg-between align-self-center">
+                        <form action="#" id="form">
+                            <input type="search" placeholder="Search..." id="search">
+                        </form>
+                        <div class="seacrch">
+                            <a class="nav-icon d-none d-lg-inline" href="#">
+                                <i class="fa fa-fw fa-search text-dark mr-2" ng-click="search()"></i>
+                            </a>
+                        </div>
+                        <div class="full openmenu" style="" id="" ng-click="openMenu()">
+                            <span class="toggle_icon" style="cursor:pointer"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="veen">
+            <div class="login-btn splits">
+                <p>Already an user?</p>
+                <button class="active">Login</button>
+            </div>
+            <div class="rgstr-btn splits">
+                <p>Don't have an account?</p>
+                <button>Register</button>
+            </div>
+            <div class="wrapper">
+                <form id="login" tabindex="500">
+                    <h3>Login</h3>
+                    <div class="mail">
+                        <input type="mail" name="" ng-model="cus.tk">
+                        <label>Mail or Username</label>
+                    </div>
+                    <div class="passwd">
+                        <input type="password" name="" ng-model="cus.password">
+                        <label>Password</label>
+                    </div>
+                    <div class="submit">
+                        <button class="dark" ng-click="login()">Login</button>
+                    </div>
+                    <small></small>
+                </form>
+                <form id="register" tabindex="502">
+                    <h3>Register</h3>
+                    <div class="name">
+                        <input type="text" name="" id="fullname" ng-model="user.full_name">
+                        <label>Full Name</label>
+                        <small></small>
+                    </div>
+                    <div class="mail">
+                        <input type="mail" name="" id="email" ng-model="user.email">
+                        <label>Mail</label>
+                        <small></small>
+                    </div>
+                    <div class="uid">
+                        <input type="text" name="" id="user" ng-model="user.tk">
+                        <label>User Name</label>
+                        <small></small>
+                    </div>
+                    <div class="passwd">
+                        <input type="password" name="" id="password" ng-model="user.password">
+                        <label>Password</label>
+                        <small></small>
+                    </div>
+                    <div class="submit">
+                        <button class="btn_submit" type="submit" ng-click="register()">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end footer -->
+    <!-- cpy -->
+    <div class="cosical_medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full center">
+                        <ul class="social_icon">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="full text-center">
+                        <p>© 2020 All Rights Reserved. <a href="https://html.design">html.design</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <script src="js/register.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
